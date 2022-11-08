@@ -6,7 +6,7 @@ import { CategoryItem } from '../../components'
 
 const Categories = ({navigation}) => {
     const onSelected = (item) => {
-        console.warn('item', item)
+        navigation.navigate('Products', {name: item.title, categoryId: item.id})
     }
     const renderItem = ({item}) => <CategoryItem item={item} onSelected={onSelected} />
 
@@ -16,7 +16,7 @@ const Categories = ({navigation}) => {
                 style={styles.constainerFlatList}
                 data = {categories}
                 renderItem={renderItem}
-                keyExtractor={item => item.id.toString}
+                keyExtractor={item => item.id.toString()}
             />
         </View>
     )
