@@ -7,7 +7,11 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
+    constainerFlatList: {
+        flex: 1
+    }
+    ,
     title: {
-        fontFamily: 'Lato-Regular'
+        fontFamily: 'Lato-Regular',
     }
 })
