@@ -2,13 +2,12 @@ import React from 'react'
 import { View, Text, Button, FlatList } from 'react-native'
 import { ProductItem } from '../../components'
 import { products} from '../../constants/data' 
+import {useSelector} from 'react-redux'
 
 
-const Products = ({navigation, route}) => {
-    const {categoryId} = route.params
-
-    const productsFilter = products.filter(product => product.categoryId == categoryId)
-
+const Products = ({navigation}) => {
+    const selectCategory = useSelector((state) => state.category.selected)
+    const productsFilter = products.filter(product => product.categoryId == selectCategory.id)
     const onSelected = (item) => {
         navigation.navigate('Product', {name: item.title, productId: item.id})
     }
