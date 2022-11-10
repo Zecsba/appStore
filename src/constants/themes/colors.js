@@ -5,5 +5,5 @@ export default {
     text: '#000000',
     black: '#000000',
     white: '#FFFFFF',
-    gray: 'C4C4C4'
+    gray: '#C4C4C4'
 }
