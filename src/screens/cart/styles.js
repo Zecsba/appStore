@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native'
-import colors from '../../constants/themes/colors'
+import { StyleSheet } from "react-native";
+import { colors } from "../../constants/themes";
 
 export const styles = StyleSheet.create({
     container: {
@@ -8,34 +8,33 @@ export const styles = StyleSheet.create({
     },
     containerList: {
         flex: 1,
-        backgroundColor: "fff",
+        backgroundColor: "#fff",
     },
     footer: {
         borderTopColor: colors.primary,
-        bordetTopWidth: 1,
+        borderTopWidth: 1,
         paddingVertical: 10,
-        marginBottom: 5,
+        marginBottom: 10,
         marginHorizontal: 10
     },
     buttonConfirm: {
         backgroundColor: colors.primary,
         borderRadius: 5,
-        paddingHorizontal: 15,
+        paddingHorizontal: 20,
         paddingVertical: 15,
         flexDirection: "row",
         justifyContent: "space-between",
-        alignContent: "center"
+        alignItems: "center",
     },
     disabledButtonConfirm: {
         backgroundColor: colors.gray,
         borderRadius: 5,
-        paddingHorizontal: 15,
+        paddingHorizontal: 20,
         paddingVertical: 15,
         flexDirection: "row",
         justifyContent: "space-between",
-        alignContent: "center"
-    }
-    ,
+        alignItems: "center",
+    },
     textButtonConfirm: {
         fontFamily: "Lato-Regular",
         fontSize: 14,
@@ -43,15 +42,15 @@ export const styles = StyleSheet.create({
     totalContainer: {
         flex: 0.4,
         flexDirection: "row",
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        alignItems: "center",
+        justifyContent: "space-between",
     },
     totalTitle: {
         fontFamily: "Lato-Regular",
-        fontSize: 14
+        fontSize: 14,
     },
     total: {
-        fontFamily: "Lato-Regular",
-        fontSize: 14
+        fontFamily: "Lato-Bold",
+        fontSize: 16,
     },
-}) 
+});

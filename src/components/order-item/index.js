@@ -1,17 +1,16 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { TouchableOpacity, View, Text } from "react-native";
 import { styles } from "./styles";
-import colors from "../../constants/themes/colors";
-import {Ionicons} from "@expo/vector-icons"
-
+import { colors } from "../../constants/themes";
+import { Ionicons } from "@expo/vector-icons";
 
 const formDate = (time) => {
-    const date = new Date(time)
-    return date.toLocaleDateString()
+    const date = new Date(time);
+    return date.toLocaleDateString();
 }
 
-const OrderItem = ({item, onCancel}) => {
-    return(
+const OrderItem = ({ item, onCancel }) => {
+    return (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
                 <Text style={styles.date}>{formDate(item.date)}</Text>
@@ -28,4 +27,4 @@ const OrderItem = ({item, onCancel}) => {
     )
 }
 
-export default OrderItem
+export default OrderItem;

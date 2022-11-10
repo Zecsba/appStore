@@ -1,11 +1,11 @@
 import { StyleSheet } from "react-native";
-import colors from "../../constants/themes/colors";
+import { colors } from "../../constants/themes";
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
         height: 120,
-        backgroundColor: colors.secondary,
+        backgroundColor: colors.primary,
         borderWidth: 1,
         borderRadius: 5,
         borderColor: colors.primary,
@@ -25,28 +25,28 @@ export const styles = StyleSheet.create({
     title: {
         fontSize: 16,
         fontFamily: "Lato-Bold",
+        color: colors.text,
         marginBottom: 5,
-        color: colors.text
     },
     contentContainer: {
         flex: 1,
         flexDirection: "row",
         flexWrap: "wrap",
-        justifyContent: "space-around",
-        alignContent: "center"
+        justifyContent: "space-between",
+        alignItems: "center",
     },
     content: {
         flex: 1,
     },
     quantity: {
         fontSize: 14,
-        fontFamily: 'Lato-Regular',
+        fontFamily: "Lato-Regular",
+        color: colors.text,
         marginBottom: 5,
-        color: colors.text
     },
     price: {
         fontSize: 14,
+        color: colors.text,
         fontFamily: "Lato-Bold",
-        color: colors.text
-    }
+    },
 })

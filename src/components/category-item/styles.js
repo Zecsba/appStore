@@ -11,16 +11,17 @@ export const styles = StyleSheet.create({
     contentContainer: {
         flex: 1,
         borderRadius: 10,
-        shadowColor: 'black',
+        shadowColor: "black",
         shadowOpacity: 0.26,
-        shadowOffset: {width: 0, height: 2},
+        shadowOffset: { width: 0, height: 2 },
         shadowRadius: 5,
         elevation: 4,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        padding: 10,
     },
     title: {
         fontFamily: 'Lato-Bold',
         fontSize: 20,
     }
-})
+});

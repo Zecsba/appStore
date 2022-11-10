@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import colors from "../../constants/themes/colors";
+import { colors } from "../../constants/themes";
 
 export const styles = StyleSheet.create({
     container: {
@@ -26,4 +26,4 @@ export const styles = StyleSheet.create({
         fontSize: 16,
         fontFamily: "Lato-Bold",
     },
-})
+});

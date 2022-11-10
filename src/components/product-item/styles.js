@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import colors from "../../constants/themes/colors";
+import { colors } from "../../constants/themes";
 
 export const styles = StyleSheet.create({
     container: {
@@ -11,9 +11,9 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.primary,
         height: 120,
     },
-    item:{
+    item: {
         flex: 1,
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
     },
     title: {
         fontFamily: 'Lato-Bold',
@@ -25,10 +25,10 @@ export const styles = StyleSheet.create({
     },
     detailsContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
     },
     detail: {
         fontFamily: 'Lato-Regular',
-        fontSize: 14
-    }
-})
+        fontSize: 14,
+    },
+});

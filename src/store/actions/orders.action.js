@@ -1,7 +1,8 @@
+
 import { URL_API } from '../../constants/firebase';
 import { ordersTypes } from '../types'
 
-const { GET_ORDERS, DELETE_ORDER } = ordersTypes;
+const { GET_ORDERS, DELETE_ORDER} = ordersTypes;
 
 export const getOrders = () => {
     return async (dispatch) => {
@@ -36,13 +37,13 @@ export const getOrders = () => {
 
 export const deleteOrder = (id) => {
     return async (dispatch) => {
-        try{
+        try {
             const response = await fetch(`${URL_API}/orders/${id}.json`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            })
+            });
 
             const data = await response.json();
 
@@ -50,10 +51,8 @@ export const deleteOrder = (id) => {
                 type: DELETE_ORDER,
                 id
             })
-
-            
-        } catch(error){
-            console.log(error.message)
+        } catch (error) {
+            console.log(error.message);
         }
     }
 }

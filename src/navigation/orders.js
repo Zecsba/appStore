@@ -1,27 +1,26 @@
 import React from "react";
-import { isAndroid } from "../utils/funtioncs";
+import { isAndroid } from "../utils";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Orders } from "../screens";
-import colors from "../constants/themes/colors";
+import { colors } from "../constants/themes";
 
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator();
 
-const OrderNavigator = () => {
+const OrdersNavigator = () => {
     return(
         <Stack.Navigator 
             initialRouteName="Orders"
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: isAndroid ? colors.primary : colors.secondary
+                    backgroundColor: isAndroid ? colors.primary : colors.secondary,
                 },
                 headerTintColor: colors.text,
-                headerTintColor: {
-                    fontFamily: 'Lato-Bold'
-                }
-
+                headerTitleStyle: {
+                    fontFamily: 'Lato-Bold',
+                },
             }}
         >
-            <Stack.Screen 
+            <Stack.Screen
                 name="Orders"
                 component={Orders}
             />
@@ -29,4 +28,4 @@ const OrderNavigator = () => {
     )
 }
 
-export default OrderNavigator
+export default OrdersNavigator;

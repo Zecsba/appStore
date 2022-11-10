@@ -1,1 +1,1 @@
-export * from './funtioncs'
+export * from './functions'

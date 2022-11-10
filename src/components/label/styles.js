@@ -1,16 +1,14 @@
 import { StyleSheet } from "react-native";
+import { colors } from "../../constants/themes";
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
     },
-    containerList: {
-        flex: 1,
-    },
-    title: {
+    label: {
+        fontSize: 14,
         fontFamily: 'Lato-Regular',
-    }
-})
+        marginVertical: 5,
+        color: colors.text
+    },
+});

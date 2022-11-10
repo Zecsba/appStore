@@ -1,46 +1,45 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import {Ionicons} from '@expo/vector-icons'
+import { Ionicons } from "@expo/vector-icons";
 import CartNavigator from "./cart";
 import ShopNavigator from "./shop";
-import OrderNavigator from "./orders";
-import colors from "../constants/themes/colors";
+import OrdersNavigator from "./orders";
+import { colors } from "../constants/themes";
 
-const BottomTab = createBottomTabNavigator()
+const BottomTab = createBottomTabNavigator();
 
 const Tabs = () => {
-    return(
+    return (
         <BottomTab.Navigator
             initialRouteName="ShopTab"
             screenOptions={{
                 headerShown: false,
                 tabBarLabelStyle: {
                     fontFamily: 'Lato-Bold',
-                    color: colors.primary
+                    color: colors.primary,
                 }
             }}
         >
-            <BottomTab.Screen 
-                name='ShopTab'
+            <BottomTab.Screen
+                name="ShopTab"
                 component={ShopNavigator}
                 options={{
                     title: 'Shop',
-                    tabBarIcon: ({focused}) => (
+                    tabBarIcon: ({ focused }) => (
                         <Ionicons 
                             name={focused ? 'home' : "home-outline"}
                             size={22}
                             color={colors.primary}
                         />
-                    )
-                    
+                    ),
                 }}
             />
-            <BottomTab.Screen 
-                name='OrdersTab'
-                component={OrderNavigator}
+            <BottomTab.Screen
+                name="OrdersTab"
+                component={OrdersNavigator}
                 options={{
-                    title: 'Order',
-                    tabBarIcon: ({focused}) => (
+                    title: 'Orders',
+                    tabBarIcon: ({ focused }) => (
                         <Ionicons 
                             name={focused ? 'file-tray-full' : "file-tray-full-outline"}
                             size={22}
@@ -49,14 +48,14 @@ const Tabs = () => {
                     )
                 }}
             />
-            <BottomTab.Screen 
-                name='CartTab'
+            <BottomTab.Screen
+                name="CartTab"
                 component={CartNavigator}
                 options={{
                     title: 'Cart',
-                    tabBarIcon: ({focused}) => (
+                    tabBarIcon: ({ focused }) => (
                         <Ionicons 
-                            name={focused ? 'cart' :"cart-outline"}
+                            name={focused ? 'cart' : 'cart-outline'}
                             size={22}
                             color={colors.primary}
                         />
@@ -67,4 +66,4 @@ const Tabs = () => {
     )
 }
 
-export default Tabs
+export default Tabs;

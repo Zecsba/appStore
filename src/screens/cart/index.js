@@ -1,38 +1,37 @@
 import React from "react";
-import {View, FlatList, TouchableOpacity, Text } from "react-native";
+import { View, FlatList, TouchableOpacity, Text} from "react-native";
 import { styles } from "./styles";
-import { CartItem } from "../../components";
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from "react-redux";
+import CartItem from "../../components/cart-item";
 import { confirmCart, removeFromCart } from "../../store/actions";
 
 const Cart = ({navigation}) => {
-const dispatch = useDispatch()
-   const items = useSelector(state => state.cart.items)
-   const total = useSelector(state => state.cart.total)
-
+    const dispatch = useDispatch();
+    const items = useSelector(state => state.cart.items);
+    const total = useSelector(state => state.cart.total);
+    
     const onDelete = (id) => {
         dispatch(removeFromCart(id))
     }
-
     const onConfirm = () => {
-        dispatch(confirmCart(items, total))
+        dispatch(confirmCart(items, total));
     }
 
-    const renderItem = ({item}) => <CartItem item={item} onDelete={onDelete}/>
+    const renderItem = ({item}) => <CartItem item={item} onDelete={onDelete} />
 
-    return( 
-        <View style={styles.container}> 
-
+    return (
+        <View style={styles.container}>
             <View style={styles.containerList}>
-                <FlatList 
-                    data={items}
-                    renderItem={renderItem}
-                    keyExtractor={item => item.id.toString()}
-                />
+           <FlatList 
+                data={items}
+                renderItem={renderItem}
+                style={styles.containerList}
+                keyExtractor={item => item.id.toString()}
+            />
             </View>
             <View style={styles.footer}>
                 <TouchableOpacity 
-                    style={items.length === 0 ? styles.disabledButtonConfirm : styles.buttonConfirm} 
+                    style={items.length === 0 ?  styles.disabledButtonConfirm : styles.buttonConfirm}
                     onPress={onConfirm}
                     disabled={items.length === 0}
                 >
@@ -42,9 +41,9 @@ const dispatch = useDispatch()
                         <Text style={styles.total}>${total}</Text>
                     </View>
                 </TouchableOpacity>
-            </View>   
+            </View>
         </View>
     )
-}
+};
 
-export default Cart
+export default Cart;

@@ -1,10 +1,10 @@
 import React from "react";
-import { isAndroid } from "../utils/funtioncs";
+import { isAndroid } from "../utils";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Cart } from "../screens";
-import colors from "../constants/themes/colors";
+import { colors } from "../constants/themes";
 
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator();
 
 const CartNavigator = () => {
     return(
@@ -12,16 +12,15 @@ const CartNavigator = () => {
             initialRouteName="Cart"
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: isAndroid ? colors.primary : colors.secondary
+                    backgroundColor: isAndroid ? colors.primary : colors.secondary,
                 },
                 headerTintColor: colors.text,
-                headerTintColor: {
-                    fontFamily: 'Lato-Bold'
-                }
-
+                headerTitleStyle: {
+                    fontFamily: 'Lato-Bold',
+                },
             }}
         >
-            <Stack.Screen 
+            <Stack.Screen
                 name="Cart"
                 component={Cart}
             />
@@ -29,4 +28,4 @@ const CartNavigator = () => {
     )
 }
 
-export default CartNavigator
+export default CartNavigator;
