@@ -5,7 +5,7 @@ export const cart = [
         title: "Pan Bagguette",
         description: "clasico pan frances",
         weight: "400gr",
-        price: 600,
+        price: 692,
         quantity: 2,
     },
     {   
@@ -14,7 +14,16 @@ export const cart = [
         title: "Pan de molde",
         description: "clasico pan de molde",
         weight: "400gr",
-        price: 800,
+        price: 892,
         quantity: 3,
+    },
+    {   
+        id: 3,
+        category: 2,
+        title: "Pan de molde",
+        description: "clasico pan de molde",
+        weight: "400gr",
+        price: 234,
+        quantity: 2,
     }
 ];
