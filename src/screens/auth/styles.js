@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10,
         backgroundColor: colors.white,
-        height: 300,
+        height: 310,
     },
     title: {
         fontSize: 18,
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
         marginVertical: 5,
     },
     input: {
-        borderBottomColor: colors.primary,
+        borderBottomColor: "white",
         borderBottomWidth: 1,
         width: '90%',
         fontFamily: 'Lato-Regular',
@@ -42,6 +42,7 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
         borderRadius: 5,
+        marginTop: 5
     },
     prompt: {
         flexDirection: 'row',

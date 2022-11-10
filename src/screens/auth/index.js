@@ -69,7 +69,7 @@ const Auth = ({ navigation }) => {
                     autoCapitalize="none"
                     autoCorrect={false}
                     onChangeText={(text) => onHandleChange(text, 'email')}
-                    onBlur={(e) => onHandleBlur(e.nativeEvent.text, 'email')}
+                    endEditing={(e) => onHandleBlur(e.nativeEvent.text, 'email')}
                     hasError={formState.email.hasError}
                     error={formState.email.error}
                     touched={formState.email.touched}
@@ -84,7 +84,7 @@ const Auth = ({ navigation }) => {
                     autoCapitalize="none"
                     autoCorrect={false}
                     onChangeText={(text) => onHandleChange(text, 'password')}
-                    onBlur={(e) => onHandleBlur(e.nativeEvent.text, 'password')}
+                    endEditing ={(e) => onHandleBlur(e.nativeEvent.text, 'password')}
                     hasError={formState.password.hasError}
                     error={formState.password.error}
                     touched={formState.password.touched}
